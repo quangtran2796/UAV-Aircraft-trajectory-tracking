@@ -1,0 +1,33 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/University/Aircraft/FPGA/Auto_manual/simulation/modelsim
+vAuto_manual
+!s110 1527387503
+!i10b 1
+!s100 aG46OZh?4YL4lzHeoIM<N0
+I2dcTJ=Ua]S<<^2RB?:]i70
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1527387457
+8Auto_manual.vo
+FAuto_manual.vo
+L0 32
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1527387502.000000
+!s107 Auto_manual.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|Auto_manual.vo|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+.
+tCvgOpt 0
+n@auto_manual

@@ -1,0 +1,32 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/ProgramFiles/IntelFPGA
+vPulseWidth
+!s110 1499702085
+!i10b 1
+!s100 4BgdTblDgh<EbOB;Tkz:P1
+Ia?7@eS7<_]n7FzD5f=YQV3
+VDg1SIo80bB@j0V0VzS_@n1
+dD:/University/Aircraft/FPGA/Auto_manual/simulation/PulseWidth
+w1499701177
+8D:/University/Aircraft/FPGA/Auto_manual/PulseWidth.v
+FD:/University/Aircraft/FPGA/Auto_manual/PulseWidth.v
+L0 1
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1499702085.000000
+!s107 D:/University/Aircraft/FPGA/Auto_manual/PulseWidth.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/University/Aircraft/FPGA/Auto_manual/PulseWidth.v|
+!i113 1
+o-work work
+tCvgOpt 0
+n@pulse@width

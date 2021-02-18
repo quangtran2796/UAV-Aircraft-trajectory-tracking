@@ -1,0 +1,729 @@
+TimeQuest Timing Analyzer report for Auto_manual
+Sun May 27 09:17:33 2018
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7]'
+ 12. Setup: 'clk'
+ 13. Hold: 'clk'
+ 14. Hold: 'lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7]'
+ 15. Setup Transfers
+ 16. Hold Transfers
+ 17. Report TCCS
+ 18. Report RSKM
+ 19. Unconstrained Paths Summary
+ 20. Clock Status Summary
+ 21. Unconstrained Input Ports
+ 22. Unconstrained Output Ports
+ 23. Unconstrained Input Ports
+ 24. Unconstrained Output Ports
+ 25. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                           ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
+; Revision Name         ; Auto_manual                                         ;
+; Device Family         ; MAX II                                              ;
+; Device Name           ; EPM240T100C5                                        ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Slow Model                                          ;
+; Rise/Fall Delays      ; Unavailable                                         ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                                                   ;
++-----------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------------------------------+
+; Clock Name                                          ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                                 ;
++-----------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------------------------------+
+; clk                                                 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                                                 ;
+; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] } ;
+; NADV                                                ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { NADV }                                                ;
++-----------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Fmax Summary                                                                              ;
++------------+-----------------+-----------------------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                                          ; Note ;
++------------+-----------------+-----------------------------------------------------+------+
+; 116.21 MHz ; 116.21 MHz      ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ;      ;
+; 128.87 MHz ; 128.87 MHz      ; clk                                                 ;      ;
++------------+-----------------+-----------------------------------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------------------------------------------------+
+; Setup Summary                                                                ;
++-----------------------------------------------------+--------+---------------+
+; Clock                                               ; Slack  ; End Point TNS ;
++-----------------------------------------------------+--------+---------------+
+; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; -7.605 ; -411.453      ;
+; clk                                                 ; -6.760 ; -54.080       ;
++-----------------------------------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Summary                                                                 ;
++-----------------------------------------------------+--------+---------------+
+; Clock                                               ; Slack  ; End Point TNS ;
++-----------------------------------------------------+--------+---------------+
+; clk                                                 ; -1.607 ; -1.607        ;
+; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.659  ; 0.000         ;
++-----------------------------------------------------+--------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++------------------------------------------------------------------------------+
+; Minimum Pulse Width Summary                                                  ;
++-----------------------------------------------------+--------+---------------+
+; Clock                                               ; Slack  ; End Point TNS ;
++-----------------------------------------------------+--------+---------------+
+; NADV                                                ; -2.289 ; -2.289        ;
+; clk                                                 ; -2.289 ; -2.289        ;
+; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.234  ; 0.000         ;
++-----------------------------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7]'                                                                                                                                                            ;
++--------+-----------------------------+-----------------------------+-----------------------------------------------------+-----------------------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                   ; To Node                     ; Launch Clock                                        ; Latch Clock                                         ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------+-----------------------------+-----------------------------------------------------+-----------------------------------------------------+--------------+------------+------------+
+; -7.605 ; Switch_Mode:inst2|count[14] ; Switch_Mode:inst2|count[15] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.272      ;
+; -7.605 ; Switch_Mode:inst2|count[14] ; Switch_Mode:inst2|count[14] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.272      ;
+; -7.605 ; Switch_Mode:inst2|count[14] ; Switch_Mode:inst2|count[13] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.272      ;
+; -7.605 ; Switch_Mode:inst2|count[14] ; Switch_Mode:inst2|count[12] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.272      ;
+; -7.605 ; Switch_Mode:inst2|count[14] ; Switch_Mode:inst2|count[11] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.272      ;
+; -7.605 ; Switch_Mode:inst2|count[14] ; Switch_Mode:inst2|count[10] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.272      ;
+; -7.605 ; Switch_Mode:inst2|count[14] ; Switch_Mode:inst2|count[19] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.272      ;
+; -7.605 ; Switch_Mode:inst2|count[14] ; Switch_Mode:inst2|count[18] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.272      ;
+; -7.605 ; Switch_Mode:inst2|count[14] ; Switch_Mode:inst2|count[17] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.272      ;
+; -7.605 ; Switch_Mode:inst2|count[14] ; Switch_Mode:inst2|count[16] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.272      ;
+; -7.597 ; Switch_Mode:inst2|count[7]  ; Switch_Mode:inst2|count[15] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.264      ;
+; -7.597 ; Switch_Mode:inst2|count[7]  ; Switch_Mode:inst2|count[14] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.264      ;
+; -7.597 ; Switch_Mode:inst2|count[7]  ; Switch_Mode:inst2|count[13] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.264      ;
+; -7.597 ; Switch_Mode:inst2|count[7]  ; Switch_Mode:inst2|count[12] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.264      ;
+; -7.597 ; Switch_Mode:inst2|count[7]  ; Switch_Mode:inst2|count[11] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.264      ;
+; -7.597 ; Switch_Mode:inst2|count[7]  ; Switch_Mode:inst2|count[10] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.264      ;
+; -7.597 ; Switch_Mode:inst2|count[7]  ; Switch_Mode:inst2|count[19] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.264      ;
+; -7.597 ; Switch_Mode:inst2|count[7]  ; Switch_Mode:inst2|count[18] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.264      ;
+; -7.597 ; Switch_Mode:inst2|count[7]  ; Switch_Mode:inst2|count[17] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.264      ;
+; -7.597 ; Switch_Mode:inst2|count[7]  ; Switch_Mode:inst2|count[16] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.264      ;
+; -7.552 ; Switch_Mode:inst2|count[8]  ; Switch_Mode:inst2|count[15] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.219      ;
+; -7.552 ; Switch_Mode:inst2|count[8]  ; Switch_Mode:inst2|count[14] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.219      ;
+; -7.552 ; Switch_Mode:inst2|count[8]  ; Switch_Mode:inst2|count[13] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.219      ;
+; -7.552 ; Switch_Mode:inst2|count[8]  ; Switch_Mode:inst2|count[12] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.219      ;
+; -7.552 ; Switch_Mode:inst2|count[8]  ; Switch_Mode:inst2|count[11] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.219      ;
+; -7.552 ; Switch_Mode:inst2|count[8]  ; Switch_Mode:inst2|count[10] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.219      ;
+; -7.552 ; Switch_Mode:inst2|count[8]  ; Switch_Mode:inst2|count[19] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.219      ;
+; -7.552 ; Switch_Mode:inst2|count[8]  ; Switch_Mode:inst2|count[18] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.219      ;
+; -7.552 ; Switch_Mode:inst2|count[8]  ; Switch_Mode:inst2|count[17] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.219      ;
+; -7.552 ; Switch_Mode:inst2|count[8]  ; Switch_Mode:inst2|count[16] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.219      ;
+; -7.541 ; Switch_Mode:inst2|count[15] ; Switch_Mode:inst2|count[15] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.208      ;
+; -7.541 ; Switch_Mode:inst2|count[15] ; Switch_Mode:inst2|count[14] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.208      ;
+; -7.541 ; Switch_Mode:inst2|count[15] ; Switch_Mode:inst2|count[13] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.208      ;
+; -7.541 ; Switch_Mode:inst2|count[15] ; Switch_Mode:inst2|count[12] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.208      ;
+; -7.541 ; Switch_Mode:inst2|count[15] ; Switch_Mode:inst2|count[11] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.208      ;
+; -7.541 ; Switch_Mode:inst2|count[15] ; Switch_Mode:inst2|count[10] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.208      ;
+; -7.541 ; Switch_Mode:inst2|count[15] ; Switch_Mode:inst2|count[19] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.208      ;
+; -7.541 ; Switch_Mode:inst2|count[15] ; Switch_Mode:inst2|count[18] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.208      ;
+; -7.541 ; Switch_Mode:inst2|count[15] ; Switch_Mode:inst2|count[17] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.208      ;
+; -7.541 ; Switch_Mode:inst2|count[15] ; Switch_Mode:inst2|count[16] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.208      ;
+; -7.422 ; Switch_Mode:inst2|count[10] ; Switch_Mode:inst2|count[15] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.089      ;
+; -7.422 ; Switch_Mode:inst2|count[10] ; Switch_Mode:inst2|count[14] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.089      ;
+; -7.422 ; Switch_Mode:inst2|count[10] ; Switch_Mode:inst2|count[13] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.089      ;
+; -7.422 ; Switch_Mode:inst2|count[10] ; Switch_Mode:inst2|count[12] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.089      ;
+; -7.422 ; Switch_Mode:inst2|count[10] ; Switch_Mode:inst2|count[11] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.089      ;
+; -7.422 ; Switch_Mode:inst2|count[10] ; Switch_Mode:inst2|count[10] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.089      ;
+; -7.422 ; Switch_Mode:inst2|count[10] ; Switch_Mode:inst2|count[19] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.089      ;
+; -7.422 ; Switch_Mode:inst2|count[10] ; Switch_Mode:inst2|count[18] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.089      ;
+; -7.422 ; Switch_Mode:inst2|count[10] ; Switch_Mode:inst2|count[17] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.089      ;
+; -7.422 ; Switch_Mode:inst2|count[10] ; Switch_Mode:inst2|count[16] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.089      ;
+; -7.419 ; Switch_Mode:inst2|count[4]  ; Switch_Mode:inst2|count[15] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.086      ;
+; -7.419 ; Switch_Mode:inst2|count[4]  ; Switch_Mode:inst2|count[14] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.086      ;
+; -7.419 ; Switch_Mode:inst2|count[4]  ; Switch_Mode:inst2|count[13] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.086      ;
+; -7.419 ; Switch_Mode:inst2|count[4]  ; Switch_Mode:inst2|count[12] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.086      ;
+; -7.419 ; Switch_Mode:inst2|count[4]  ; Switch_Mode:inst2|count[11] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.086      ;
+; -7.419 ; Switch_Mode:inst2|count[4]  ; Switch_Mode:inst2|count[10] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.086      ;
+; -7.419 ; Switch_Mode:inst2|count[4]  ; Switch_Mode:inst2|count[19] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.086      ;
+; -7.419 ; Switch_Mode:inst2|count[4]  ; Switch_Mode:inst2|count[18] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.086      ;
+; -7.419 ; Switch_Mode:inst2|count[4]  ; Switch_Mode:inst2|count[17] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.086      ;
+; -7.419 ; Switch_Mode:inst2|count[4]  ; Switch_Mode:inst2|count[16] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 8.086      ;
+; -7.285 ; Switch_Mode:inst2|count[13] ; Switch_Mode:inst2|count[15] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.952      ;
+; -7.285 ; Switch_Mode:inst2|count[13] ; Switch_Mode:inst2|count[14] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.952      ;
+; -7.285 ; Switch_Mode:inst2|count[13] ; Switch_Mode:inst2|count[13] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.952      ;
+; -7.285 ; Switch_Mode:inst2|count[13] ; Switch_Mode:inst2|count[12] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.952      ;
+; -7.285 ; Switch_Mode:inst2|count[13] ; Switch_Mode:inst2|count[11] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.952      ;
+; -7.285 ; Switch_Mode:inst2|count[13] ; Switch_Mode:inst2|count[10] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.952      ;
+; -7.285 ; Switch_Mode:inst2|count[13] ; Switch_Mode:inst2|count[19] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.952      ;
+; -7.285 ; Switch_Mode:inst2|count[13] ; Switch_Mode:inst2|count[18] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.952      ;
+; -7.285 ; Switch_Mode:inst2|count[13] ; Switch_Mode:inst2|count[17] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.952      ;
+; -7.285 ; Switch_Mode:inst2|count[13] ; Switch_Mode:inst2|count[16] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.952      ;
+; -7.279 ; Switch_Mode:inst2|count[6]  ; Switch_Mode:inst2|count[15] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.946      ;
+; -7.279 ; Switch_Mode:inst2|count[6]  ; Switch_Mode:inst2|count[14] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.946      ;
+; -7.279 ; Switch_Mode:inst2|count[6]  ; Switch_Mode:inst2|count[13] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.946      ;
+; -7.279 ; Switch_Mode:inst2|count[6]  ; Switch_Mode:inst2|count[12] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.946      ;
+; -7.279 ; Switch_Mode:inst2|count[6]  ; Switch_Mode:inst2|count[11] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.946      ;
+; -7.279 ; Switch_Mode:inst2|count[6]  ; Switch_Mode:inst2|count[10] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.946      ;
+; -7.279 ; Switch_Mode:inst2|count[6]  ; Switch_Mode:inst2|count[19] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.946      ;
+; -7.279 ; Switch_Mode:inst2|count[6]  ; Switch_Mode:inst2|count[18] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.946      ;
+; -7.279 ; Switch_Mode:inst2|count[6]  ; Switch_Mode:inst2|count[17] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.946      ;
+; -7.279 ; Switch_Mode:inst2|count[6]  ; Switch_Mode:inst2|count[16] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.946      ;
+; -7.229 ; Switch_Mode:inst2|count[19] ; Switch_Mode:inst2|count[15] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.896      ;
+; -7.229 ; Switch_Mode:inst2|count[19] ; Switch_Mode:inst2|count[14] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.896      ;
+; -7.229 ; Switch_Mode:inst2|count[19] ; Switch_Mode:inst2|count[13] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.896      ;
+; -7.229 ; Switch_Mode:inst2|count[19] ; Switch_Mode:inst2|count[12] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.896      ;
+; -7.229 ; Switch_Mode:inst2|count[19] ; Switch_Mode:inst2|count[11] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.896      ;
+; -7.229 ; Switch_Mode:inst2|count[19] ; Switch_Mode:inst2|count[10] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.896      ;
+; -7.229 ; Switch_Mode:inst2|count[19] ; Switch_Mode:inst2|count[19] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.896      ;
+; -7.229 ; Switch_Mode:inst2|count[19] ; Switch_Mode:inst2|count[18] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.896      ;
+; -7.229 ; Switch_Mode:inst2|count[19] ; Switch_Mode:inst2|count[17] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.896      ;
+; -7.229 ; Switch_Mode:inst2|count[19] ; Switch_Mode:inst2|count[16] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.896      ;
+; -7.156 ; Switch_Mode:inst2|count[11] ; Switch_Mode:inst2|count[15] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.823      ;
+; -7.156 ; Switch_Mode:inst2|count[11] ; Switch_Mode:inst2|count[14] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.823      ;
+; -7.156 ; Switch_Mode:inst2|count[11] ; Switch_Mode:inst2|count[13] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.823      ;
+; -7.156 ; Switch_Mode:inst2|count[11] ; Switch_Mode:inst2|count[12] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.823      ;
+; -7.156 ; Switch_Mode:inst2|count[11] ; Switch_Mode:inst2|count[11] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.823      ;
+; -7.156 ; Switch_Mode:inst2|count[11] ; Switch_Mode:inst2|count[10] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.823      ;
+; -7.156 ; Switch_Mode:inst2|count[11] ; Switch_Mode:inst2|count[19] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.823      ;
+; -7.156 ; Switch_Mode:inst2|count[11] ; Switch_Mode:inst2|count[18] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.823      ;
+; -7.156 ; Switch_Mode:inst2|count[11] ; Switch_Mode:inst2|count[17] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.823      ;
+; -7.156 ; Switch_Mode:inst2|count[11] ; Switch_Mode:inst2|count[16] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1.000        ; 0.000      ; 7.823      ;
++--------+-----------------------------+-----------------------------+-----------------------------------------------------+-----------------------------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'clk'                                                                                                                                                                                                                    ;
++--------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                           ; To Node                                             ; Launch Clock                                        ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-------------+--------------+------------+------------+
+; -6.760 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.427      ;
+; -6.760 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.427      ;
+; -6.760 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.427      ;
+; -6.760 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.427      ;
+; -6.760 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.427      ;
+; -6.760 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.427      ;
+; -6.760 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.427      ;
+; -6.760 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.427      ;
+; -6.731 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.398      ;
+; -6.731 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.398      ;
+; -6.731 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.398      ;
+; -6.731 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.398      ;
+; -6.731 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.398      ;
+; -6.731 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.398      ;
+; -6.731 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.398      ;
+; -6.731 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.398      ;
+; -6.558 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.225      ;
+; -6.558 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.225      ;
+; -6.558 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.225      ;
+; -6.558 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.225      ;
+; -6.558 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.225      ;
+; -6.558 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.225      ;
+; -6.558 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.225      ;
+; -6.558 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.225      ;
+; -6.414 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.081      ;
+; -6.414 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.081      ;
+; -6.414 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.081      ;
+; -6.414 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.081      ;
+; -6.414 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.081      ;
+; -6.414 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.081      ;
+; -6.414 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.081      ;
+; -6.414 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.081      ;
+; -6.397 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.064      ;
+; -6.397 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.064      ;
+; -6.397 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.064      ;
+; -6.397 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.064      ;
+; -6.397 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.064      ;
+; -6.397 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.064      ;
+; -6.397 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.064      ;
+; -6.397 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 7.064      ;
+; -5.415 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 6.082      ;
+; -5.415 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 6.082      ;
+; -5.415 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 6.082      ;
+; -5.415 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 6.082      ;
+; -5.415 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 6.082      ;
+; -5.415 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 6.082      ;
+; -5.415 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 6.082      ;
+; -5.415 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 6.082      ;
+; -5.331 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 5.998      ;
+; -5.331 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 5.998      ;
+; -5.331 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 5.998      ;
+; -5.331 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 5.998      ;
+; -5.331 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 5.998      ;
+; -5.331 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 5.998      ;
+; -5.331 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 5.998      ;
+; -5.331 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; clk                                                 ; clk         ; 1.000        ; 0.000      ; 5.998      ;
+; -2.809 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; 0.500        ; 3.348      ; 6.700      ;
+; -2.809 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; 0.500        ; 3.348      ; 6.700      ;
+; -2.809 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; 0.500        ; 3.348      ; 6.700      ;
+; -2.809 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; 0.500        ; 3.348      ; 6.700      ;
+; -2.809 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; 0.500        ; 3.348      ; 6.700      ;
+; -2.809 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; 0.500        ; 3.348      ; 6.700      ;
+; -2.809 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; 0.500        ; 3.348      ; 6.700      ;
+; -2.809 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; 0.500        ; 3.348      ; 6.700      ;
+; -2.309 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; 1.000        ; 3.348      ; 6.700      ;
+; -2.309 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; 1.000        ; 3.348      ; 6.700      ;
+; -2.309 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; 1.000        ; 3.348      ; 6.700      ;
+; -2.309 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; 1.000        ; 3.348      ; 6.700      ;
+; -2.309 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; 1.000        ; 3.348      ; 6.700      ;
+; -2.309 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; 1.000        ; 3.348      ; 6.700      ;
+; -2.309 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; 1.000        ; 3.348      ; 6.700      ;
+; -2.309 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; 1.000        ; 3.348      ; 6.700      ;
++--------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'clk'                                                                                                                                                                                                                     ;
++--------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                           ; To Node                                             ; Launch Clock                                        ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-------------+--------------+------------+------------+
+; -1.607 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; 0.000        ; 3.348      ; 2.338      ;
+; -1.107 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; -0.500       ; 3.348      ; 2.338      ;
+; 1.467  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; 0.000        ; 3.348      ; 5.412      ;
+; 1.467  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; 0.000        ; 3.348      ; 5.412      ;
+; 1.467  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; 0.000        ; 3.348      ; 5.412      ;
+; 1.467  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; 0.000        ; 3.348      ; 5.412      ;
+; 1.467  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; 0.000        ; 3.348      ; 5.412      ;
+; 1.467  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; 0.000        ; 3.348      ; 5.412      ;
+; 1.467  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; 0.000        ; 3.348      ; 5.412      ;
+; 1.967  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; -0.500       ; 3.348      ; 5.412      ;
+; 1.967  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; -0.500       ; 3.348      ; 5.412      ;
+; 1.967  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; -0.500       ; 3.348      ; 5.412      ;
+; 1.967  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; -0.500       ; 3.348      ; 5.412      ;
+; 1.967  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; -0.500       ; 3.348      ; 5.412      ;
+; 1.967  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; -0.500       ; 3.348      ; 5.412      ;
+; 1.967  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk         ; -0.500       ; 3.348      ; 5.412      ;
+; 2.116  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 2.337      ;
+; 2.134  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 2.355      ;
+; 2.144  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 2.365      ;
+; 2.230  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 2.451      ;
+; 2.231  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 2.452      ;
+; 2.242  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 2.463      ;
+; 2.948  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 3.169      ;
+; 2.966  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 3.187      ;
+; 2.976  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 3.197      ;
+; 3.059  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 3.280      ;
+; 3.077  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 3.298      ;
+; 3.087  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 3.308      ;
+; 3.170  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 3.391      ;
+; 3.170  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 3.391      ;
+; 3.171  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 3.392      ;
+; 3.182  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 3.403      ;
+; 3.188  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 3.409      ;
+; 3.281  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 3.502      ;
+; 3.281  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 3.502      ;
+; 3.492  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 3.713      ;
+; 3.492  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 3.713      ;
+; 3.492  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 3.713      ;
+; 3.556  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 3.777      ;
+; 3.556  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 3.777      ;
+; 3.556  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 3.777      ;
+; 3.651  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 3.872      ;
+; 3.651  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 3.872      ;
+; 3.651  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 3.872      ;
+; 3.657  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 3.878      ;
+; 3.657  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 3.878      ;
+; 3.657  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 3.878      ;
+; 3.750  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 3.971      ;
+; 3.750  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 3.971      ;
+; 3.750  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 3.971      ;
+; 5.354  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 5.575      ;
+; 5.354  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 5.575      ;
+; 5.502  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 5.723      ;
+; 5.502  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 5.723      ;
+; 5.502  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 5.723      ;
+; 5.524  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 5.745      ;
+; 5.524  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 5.745      ;
+; 5.524  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 5.745      ;
+; 5.524  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 5.745      ;
+; 5.524  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 5.745      ;
+; 5.524  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[6] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 5.745      ;
+; 5.634  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 5.855      ;
+; 5.634  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 5.855      ;
+; 5.634  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 5.855      ;
+; 5.634  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 5.855      ;
+; 5.634  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[5] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 5.855      ;
+; 5.688  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 5.909      ;
+; 5.688  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 5.909      ;
+; 5.688  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[3] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 5.909      ;
+; 5.688  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[4] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[2] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 5.909      ;
+; 5.853  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[1] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[0] ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 6.074      ;
++--------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7]'                                                                                                                                                            ;
++-------+-----------------------------+-----------------------------+-----------------------------------------------------+-----------------------------------------------------+--------------+------------+------------+
+; Slack ; From Node                   ; To Node                     ; Launch Clock                                        ; Latch Clock                                         ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------+-----------------------------+-----------------------------------------------------+-----------------------------------------------------+--------------+------------+------------+
+; 1.659 ; Switch_Mode:inst2|count[19] ; Switch_Mode:inst2|count[19] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 1.880      ;
+; 1.660 ; PulseWidth:inst12|d[6]~reg0 ; Switch_Mode:inst2|Alter     ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 1.881      ;
+; 1.765 ; PulseWidth:inst9|temp[6]    ; PulseWidth:inst9|d[6]~reg0  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 1.986      ;
+; 1.770 ; PulseWidth:inst12|temp[6]   ; PulseWidth:inst12|d[6]~reg0 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 1.991      ;
+; 1.778 ; PulseWidth:inst|temp[1]     ; PulseWidth:inst|d[1]~reg0   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 1.999      ;
+; 1.781 ; Switch_Mode:inst2|flag      ; Switch_Mode:inst2|pre_flag  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.002      ;
+; 1.784 ; PulseWidth:inst12|temp[3]   ; PulseWidth:inst12|d[3]~reg0 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.005      ;
+; 1.788 ; PulseWidth:inst12|temp[2]   ; PulseWidth:inst12|d[2]~reg0 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.009      ;
+; 1.791 ; PulseWidth:inst12|temp[0]   ; PulseWidth:inst12|d[0]~reg0 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.012      ;
+; 1.797 ; PulseWidth:inst9|temp[1]    ; PulseWidth:inst9|d[1]~reg0  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.018      ;
+; 1.822 ; PulseWidth:inst11|temp[1]   ; PulseWidth:inst11|d[1]~reg0 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.043      ;
+; 1.832 ; PulseWidth:inst|temp[6]     ; PulseWidth:inst|d[6]~reg0   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.053      ;
+; 1.861 ; PulseWidth:inst10|temp[1]   ; PulseWidth:inst10|d[1]~reg0 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.082      ;
+; 2.014 ; PulseWidth:inst9|temp[4]    ; PulseWidth:inst9|d[4]~reg0  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.235      ;
+; 2.021 ; PulseWidth:inst|temp[3]     ; PulseWidth:inst|d[3]~reg0   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.242      ;
+; 2.029 ; PulseWidth:inst9|temp[5]    ; PulseWidth:inst9|d[5]~reg0  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.250      ;
+; 2.037 ; PulseWidth:inst9|temp[7]    ; PulseWidth:inst9|d[7]~reg0  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.258      ;
+; 2.043 ; PulseWidth:inst9|temp[2]    ; PulseWidth:inst9|d[2]~reg0  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.264      ;
+; 2.043 ; PulseWidth:inst12|temp[5]   ; PulseWidth:inst12|d[5]~reg0 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.264      ;
+; 2.048 ; PulseWidth:inst12|temp[4]   ; PulseWidth:inst12|d[4]~reg0 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.269      ;
+; 2.048 ; PulseWidth:inst12|temp[1]   ; PulseWidth:inst12|d[1]~reg0 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.269      ;
+; 2.049 ; PulseWidth:inst9|temp[0]    ; PulseWidth:inst9|d[0]~reg0  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.270      ;
+; 2.052 ; PulseWidth:inst12|temp[7]   ; PulseWidth:inst12|d[7]~reg0 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.273      ;
+; 2.056 ; PulseWidth:inst|temp[5]     ; PulseWidth:inst|d[5]~reg0   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.277      ;
+; 2.075 ; PulseWidth:inst|temp[7]     ; PulseWidth:inst|d[7]~reg0   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.296      ;
+; 2.116 ; PulseWidth:inst9|temp[0]    ; PulseWidth:inst9|temp[0]    ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.337      ;
+; 2.116 ; PulseWidth:inst10|temp[0]   ; PulseWidth:inst10|temp[0]   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.337      ;
+; 2.116 ; PulseWidth:inst11|temp[0]   ; PulseWidth:inst11|temp[0]   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.337      ;
+; 2.116 ; PulseWidth:inst12|temp[0]   ; PulseWidth:inst12|temp[0]   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.337      ;
+; 2.116 ; PulseWidth:inst|temp[0]     ; PulseWidth:inst|temp[0]     ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.337      ;
+; 2.116 ; Switch_Mode:inst2|count[10] ; Switch_Mode:inst2|count[10] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.337      ;
+; 2.116 ; Switch_Mode:inst2|count[0]  ; Switch_Mode:inst2|count[0]  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.337      ;
+; 2.117 ; PulseWidth:inst9|temp[1]    ; PulseWidth:inst9|temp[1]    ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; PulseWidth:inst11|temp[1]   ; PulseWidth:inst11|temp[1]   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; PulseWidth:inst10|temp[1]   ; PulseWidth:inst10|temp[1]   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; PulseWidth:inst9|temp[2]    ; PulseWidth:inst9|temp[2]    ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; PulseWidth:inst10|temp[2]   ; PulseWidth:inst10|temp[2]   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; PulseWidth:inst11|temp[2]   ; PulseWidth:inst11|temp[2]   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; PulseWidth:inst9|temp[7]    ; PulseWidth:inst9|temp[7]    ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; PulseWidth:inst11|temp[7]   ; PulseWidth:inst11|temp[7]   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; PulseWidth:inst10|temp[7]   ; PulseWidth:inst10|temp[7]   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; PulseWidth:inst12|temp[7]   ; PulseWidth:inst12|temp[7]   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; PulseWidth:inst12|temp[1]   ; PulseWidth:inst12|temp[1]   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; PulseWidth:inst12|temp[2]   ; PulseWidth:inst12|temp[2]   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; PulseWidth:inst|temp[7]     ; PulseWidth:inst|temp[7]     ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; Switch_Mode:inst2|count[7]  ; Switch_Mode:inst2|count[7]  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; Switch_Mode:inst2|count[17] ; Switch_Mode:inst2|count[17] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.338      ;
+; 2.126 ; PulseWidth:inst|temp[1]     ; PulseWidth:inst|temp[1]     ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; Switch_Mode:inst2|count[12] ; Switch_Mode:inst2|count[12] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; Switch_Mode:inst2|count[11] ; Switch_Mode:inst2|count[11] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; Switch_Mode:inst2|count[9]  ; Switch_Mode:inst2|count[9]  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; Switch_Mode:inst2|count[2]  ; Switch_Mode:inst2|count[2]  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; Switch_Mode:inst2|count[1]  ; Switch_Mode:inst2|count[1]  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.347      ;
+; 2.127 ; PulseWidth:inst|temp[2]     ; PulseWidth:inst|temp[2]     ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.348      ;
+; 2.132 ; PulseWidth:inst12|d[7]~reg0 ; Switch_Mode:inst2|Alter     ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.353      ;
+; 2.133 ; Switch_Mode:inst2|Trigger   ; Switch_Mode:inst2|Trigger   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.354      ;
+; 2.144 ; Switch_Mode:inst2|wait_flag ; Switch_Mode:inst2|wait_flag ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.365      ;
+; 2.212 ; PulseWidth:inst11|temp[3]   ; PulseWidth:inst11|temp[3]   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.433      ;
+; 2.212 ; PulseWidth:inst|temp[3]     ; PulseWidth:inst|temp[3]     ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.433      ;
+; 2.221 ; Switch_Mode:inst2|count[13] ; Switch_Mode:inst2|count[13] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.442      ;
+; 2.221 ; Switch_Mode:inst2|count[8]  ; Switch_Mode:inst2|count[8]  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.442      ;
+; 2.221 ; Switch_Mode:inst2|count[3]  ; Switch_Mode:inst2|count[3]  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.442      ;
+; 2.221 ; Switch_Mode:inst2|count[18] ; Switch_Mode:inst2|count[18] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.442      ;
+; 2.222 ; PulseWidth:inst9|temp[3]    ; PulseWidth:inst9|temp[3]    ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.443      ;
+; 2.222 ; PulseWidth:inst10|temp[3]   ; PulseWidth:inst10|temp[3]   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.443      ;
+; 2.222 ; PulseWidth:inst12|temp[3]   ; PulseWidth:inst12|temp[3]   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.443      ;
+; 2.230 ; PulseWidth:inst9|temp[5]    ; PulseWidth:inst9|temp[5]    ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.451      ;
+; 2.230 ; PulseWidth:inst11|temp[5]   ; PulseWidth:inst11|temp[5]   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.451      ;
+; 2.230 ; PulseWidth:inst10|temp[5]   ; PulseWidth:inst10|temp[5]   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.451      ;
+; 2.230 ; PulseWidth:inst12|temp[5]   ; PulseWidth:inst12|temp[5]   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.451      ;
+; 2.230 ; PulseWidth:inst|temp[5]     ; PulseWidth:inst|temp[5]     ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.451      ;
+; 2.230 ; Switch_Mode:inst2|count[15] ; Switch_Mode:inst2|count[15] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.451      ;
+; 2.230 ; Switch_Mode:inst2|count[5]  ; Switch_Mode:inst2|count[5]  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.451      ;
+; 2.231 ; PulseWidth:inst9|temp[6]    ; PulseWidth:inst9|temp[6]    ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; PulseWidth:inst9|temp[4]    ; PulseWidth:inst9|temp[4]    ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; PulseWidth:inst10|temp[6]   ; PulseWidth:inst10|temp[6]   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; PulseWidth:inst10|temp[4]   ; PulseWidth:inst10|temp[4]   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; PulseWidth:inst11|temp[6]   ; PulseWidth:inst11|temp[6]   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; PulseWidth:inst11|temp[4]   ; PulseWidth:inst11|temp[4]   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; PulseWidth:inst12|temp[6]   ; PulseWidth:inst12|temp[6]   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; PulseWidth:inst12|temp[4]   ; PulseWidth:inst12|temp[4]   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; PulseWidth:inst|temp[6]     ; PulseWidth:inst|temp[6]     ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; PulseWidth:inst|temp[4]     ; PulseWidth:inst|temp[4]     ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; Switch_Mode:inst2|count[14] ; Switch_Mode:inst2|count[14] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; Switch_Mode:inst2|count[6]  ; Switch_Mode:inst2|count[6]  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; Switch_Mode:inst2|count[4]  ; Switch_Mode:inst2|count[4]  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; Switch_Mode:inst2|count[16] ; Switch_Mode:inst2|count[16] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.452      ;
+; 2.234 ; PulseWidth:inst12|d[5]~reg0 ; Switch_Mode:inst2|Alter     ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.455      ;
+; 2.254 ; PulseWidth:inst11|temp[6]   ; PulseWidth:inst11|d[6]~reg0 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.475      ;
+; 2.267 ; PulseWidth:inst11|temp[4]   ; PulseWidth:inst11|d[4]~reg0 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.488      ;
+; 2.271 ; PulseWidth:inst9|temp[3]    ; PulseWidth:inst9|d[3]~reg0  ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.492      ;
+; 2.288 ; PulseWidth:inst10|temp[3]   ; PulseWidth:inst10|d[3]~reg0 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.509      ;
+; 2.293 ; PulseWidth:inst10|temp[6]   ; PulseWidth:inst10|d[6]~reg0 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.514      ;
+; 2.293 ; Switch_Mode:inst2|pre_flag  ; Switch_Mode:inst2|wait_flag ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.514      ;
+; 2.310 ; PulseWidth:inst12|d[2]~reg0 ; Switch_Mode:inst2|Alter     ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.531      ;
+; 2.348 ; Switch_Mode:inst2|pre_flag  ; Switch_Mode:inst2|Trigger   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.569      ;
+; 2.355 ; PulseWidth:inst|temp[4]     ; PulseWidth:inst|d[4]~reg0   ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.576      ;
+; 2.356 ; PulseWidth:inst11|temp[5]   ; PulseWidth:inst11|d[5]~reg0 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.577      ;
+; 2.389 ; PulseWidth:inst11|temp[0]   ; PulseWidth:inst11|d[0]~reg0 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.610      ;
+; 2.403 ; PulseWidth:inst10|temp[5]   ; PulseWidth:inst10|d[5]~reg0 ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 0.000        ; 0.000      ; 2.624      ;
++-------+-----------------------------+-----------------------------+-----------------------------------------------------+-----------------------------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                                                       ;
++-----------------------------------------------------+-----------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                          ; To Clock                                            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------------------------------------+-----------------------------------------------------+----------+----------+----------+----------+
+; clk                                                 ; clk                                                 ; 220      ; 0        ; 0        ; 0        ;
+; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk                                                 ; 25       ; 25       ; 0        ; 0        ;
+; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1454     ; 0        ; 0        ; 0        ;
++-----------------------------------------------------+-----------------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                                                        ;
++-----------------------------------------------------+-----------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                          ; To Clock                                            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------------------------------------+-----------------------------------------------------+----------+----------+----------+----------+
+; clk                                                 ; clk                                                 ; 220      ; 0        ; 0        ; 0        ;
+; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; clk                                                 ; 25       ; 25       ; 0        ; 0        ;
+; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; 1454     ; 0        ; 0        ; 0        ;
++-----------------------------------------------------+-----------------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 14    ; 14   ;
+; Unconstrained Input Port Paths  ; 111   ; 111  ;
+; Unconstrained Output Ports      ; 14    ; 14   ;
+; Unconstrained Output Port Paths ; 86    ; 86   ;
++---------------------------------+-------+------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                                                           ;
++-----------------------------------------------------+-----------------------------------------------------+------+-------------+
+; Target                                              ; Clock                                               ; Type ; Status      ;
++-----------------------------------------------------+-----------------------------------------------------+------+-------------+
+; NADV                                                ; NADV                                                ; Base ; Constrained ;
+; clk                                                 ; clk                                                 ; Base ; Constrained ;
+; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] ; Base ; Constrained ;
++-----------------------------------------------------+-----------------------------------------------------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; AD[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; AD[1]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; AD[2]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MCU_Chan1  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MCU_Chan2  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MCU_Chan3  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MCU_Chan4  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; NE1        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; NOE        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RCV_Chan1  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RCV_Chan2  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RCV_Chan3  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RCV_Chan4  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RCV_Chan5  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; AD[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; AD[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; AD[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; AD[3]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; AD[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; AD[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; AD[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; AD[7]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Alter       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Chan1       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Chan2       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Chan3       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Chan4       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Trigger     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; AD[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; AD[1]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; AD[2]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MCU_Chan1  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MCU_Chan2  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MCU_Chan3  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MCU_Chan4  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; NE1        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; NOE        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RCV_Chan1  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RCV_Chan2  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RCV_Chan3  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RCV_Chan4  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RCV_Chan5  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; AD[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; AD[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; AD[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; AD[3]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; AD[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; AD[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; AD[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; AD[7]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Alter       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Chan1       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Chan2       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Chan3       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Chan4       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Trigger     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+    Info: Processing started: Sun May 27 09:17:27 2018
+Info: Command: quartus_sta Auto_manual -c Auto_manual
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Warning (335093): TimeQuest Timing Analyzer is analyzing 3 combinational loops as latches. For more details, run the Check Timing command in the TimeQuest Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Auto_manual.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7]
+    Info (332105): create_clock -period 1.000 -name NADV NADV
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -7.605
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -7.605            -411.453 lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] 
+    Info (332119):    -6.760             -54.080 clk 
+Info (332146): Worst-case hold slack is -1.607
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.607              -1.607 clk 
+    Info (332119):     1.659               0.000 lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -2.289
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.289              -2.289 NADV 
+    Info (332119):    -2.289              -2.289 clk 
+    Info (332119):     0.234               0.000 lpm_counter:inst4|cntr_lki:auto_generated|safe_q[7] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4678 megabytes
+    Info: Processing ended: Sun May 27 09:17:32 2018
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:02
+
+

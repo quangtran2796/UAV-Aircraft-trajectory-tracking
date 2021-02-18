@@ -1,0 +1,28 @@
+module Switch_Mode(clk, RCV_Chan1, RCV_Chan2, RCV_Chan3, RCV_Chan4, MCU_Chan1, MCU_Chan2, MCU_Chan3, MCU_Chan4, PulWid_En, Chan1, Chan2, Chan3, Chan4, Trigger);
+input clk, RCV_Chan1, RCV_Chan2, RCV_Chan3, RCV_Chan4, MCU_Chan1, MCU_Chan2, MCU_Chan3, MCU_Chan4;
+input [15:0] PulWid_En;
+output Chan1, Chan2, Chan3, Chan4, Trigger;
+
+reg [31:0] count = 0;
+reg Trigger = 0;
+
+always @ (posedge clk)
+begin
+	if (PulWid_En >= 30000)
+	begin
+		if (count >= 4)
+		begin
+			count = 0;
+			Trigger = 1;
+		end
+		else count = count + 1;
+	end
+	else Trigger = 0;
+end
+
+assign Chan1 = (Trigger == 1) ? MCU_Chan1 : RCV_Chan1;
+assign Chan2 = (Trigger == 1) ? MCU_Chan2 : RCV_Chan2;
+assign Chan3 = (Trigger == 1) ? MCU_Chan3 : RCV_Chan3;
+assign Chan4 = (Trigger == 1) ? MCU_Chan4 : RCV_Chan4;
+
+endmodule

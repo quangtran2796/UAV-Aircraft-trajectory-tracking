@@ -1,0 +1,33 @@
+# do Auto_manual.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:05:51 on Jul 16,2017
+# vlog -work work Auto_manual.vo 
+# -- Compiling module Auto_manual
+# 
+# Top level modules:
+# 	Auto_manual
+# End time: 00:05:51 on Jul 16,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:05:51 on Jul 16,2017
+# vlog -work work Waveform.vwf.vt 
+# -- Compiling module Auto_manual_vlg_vec_tst
+# 
+# Top level modules:
+# 	Auto_manual_vlg_vec_tst
+# End time: 00:05:51 on Jul 16,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.Auto_manual_vlg_vec_tst 
+# Start time: 00:05:51 on Jul 16,2017
+# Loading work.Auto_manual_vlg_vec_tst
+# Loading work.Auto_manual
+# Loading maxii_ver.maxii_io
+# Loading maxii_ver.maxii_lcell
+# Loading maxii_ver.maxii_asynch_lcell
+# Loading maxii_ver.maxii_lcell_register
+# after#25
+# ** Note: $finish    : Waveform.vwf.vt(73)
+#    Time: 1 us  Iteration: 0  Instance: /Auto_manual_vlg_vec_tst
+# End time: 00:05:52 on Jul 16,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
